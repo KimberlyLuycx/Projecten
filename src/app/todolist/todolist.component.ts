@@ -9,7 +9,6 @@ import { Todo } from "./to-do";
 })
 
 export class TodolistComponent {
-  title = 'Project 1';
 
   todoValue : string;
   list: Todo[];

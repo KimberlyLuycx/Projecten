@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { Todo } from "./to-do";
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,4 +7,5 @@ import { Todo } from "./to-do";
 })
 
 export class AppComponent {
+  title = 'Angular projects';
 }
