@@ -8,6 +8,7 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { TourofheroesComponent } from './tourofheroes/tourofheroes.component';
 import { HeroesComponent } from './tourofheroes/heroes/heroes.component';
 import { HeroesDetailComponent } from './tourofheroes/hero-detail/hero-detail.component';
+import { MessagesComponent } from './tourofheroes/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeroesDetailComponent } from './tourofheroes/hero-detail/hero-detail.co
     TodolistComponent,
     TourofheroesComponent,
     HeroesComponent,
-    HeroesDetailComponent
+    HeroesDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
