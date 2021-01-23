@@ -9,10 +9,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular projects';
   
-    constructor(private router: Router) {
-    let path = localStorage.getItem('path');
-    if(path) {
-      localStorage.removeItem('path');
-      this.router.navigate([path]);
-    }
 }
