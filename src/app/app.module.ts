@@ -9,6 +9,8 @@ import { TourofheroesComponent } from './tourofheroes/tourofheroes.component';
 import { HeroesComponent } from './tourofheroes/heroes/heroes.component';
 import { HeroesDetailComponent } from './tourofheroes/hero-detail/hero-detail.component';
 import { MessagesComponent } from './tourofheroes/messages/messages.component';
+import { AppRoutingModule } from './tourofheroes/app-routing.module';
+import { DashboardComponent } from './tourofheroes/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { MessagesComponent } from './tourofheroes/messages/messages.component';
     TourofheroesComponent,
     HeroesComponent,
     HeroesDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
