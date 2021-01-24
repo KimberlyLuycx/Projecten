@@ -11,6 +11,10 @@ import { HeroesDetailComponent } from './tourofheroes/hero-detail/hero-detail.co
 import { MessagesComponent } from './tourofheroes/messages/messages.component';
 import { AppRoutingModule } from './tourofheroes/app-routing.module';
 import { DashboardComponent } from './tourofheroes/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './tourofheroes/in-memory-data.service';
+import { HeroSearchComponent } from './tourofheroes/hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +24,19 @@ import { DashboardComponent } from './tourofheroes/dashboard/dashboard.component
     HeroesComponent,
     HeroesDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroSearchComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
