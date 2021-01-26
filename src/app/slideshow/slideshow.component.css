@@ -1,0 +1,15 @@
+.slideshow {
+    background-color: red;
+    height: 90vh;
+    text-align: center;
+}
+
+.titelslide {
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 40vh;
+}
+
+li {
+    font-size: 1.4em;
+}

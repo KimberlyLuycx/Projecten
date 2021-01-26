@@ -1,1 +1,15 @@
-<p>slideshow works!</p>
+<div class="container bg-light mt-3 pb-2 slideshow">
+    <div *ngIf="!slideGestart">
+        <p [class.titelslide]="eersteSlide">Titel van de slideshow</p>
+        <button class="btn btn-info btn-lg" (click)="startSlide()">Start de slideshow</button>
+    </div>
+
+    <div *ngIf="slideGestart">
+        <h2 class='pt-5 font-weight-bold mb-5'>{{slides[huidigeSlide].titel | uppercase}}</h2>
+        <li *ngFor="let item of slides[huidigeSlide].items">{{item}}</li>
+        <div class='mt-4'>
+            <button *ngIf="slides[huidigeSlide].id !== 1" class="btn btn-warning  m-1" (click)="vorigeSlide()">Vorige slide</button>
+            <button *ngIf="slides[huidigeSlide].id !== laatsteSlide" class="btn btn-info m-1" (click)="volgendeSlide()">Volgende slide</button>
+        </div>
+    </div>
+</div>
